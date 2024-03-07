@@ -10,6 +10,22 @@ public class List {
 
     // The number of elements in this list
     private int size;
+
+    public static void main(String args[]) {
+        List test = new List();
+        test.addFirst('e');
+        test.addFirst('t');
+        test.first.cp.count = 2;
+        test.addFirst('i');
+        test.addFirst('m');
+        test.first.cp.count = 2;
+        test.addFirst('o');
+        test.addFirst('c');
+        System.out.println(test);
+        System.out.println(test.getFirst());
+        System.out.println(test.indexOf('m'));
+    }
+
 	
     /** Constructs an empty list. */
     public List() {
@@ -19,12 +35,12 @@ public class List {
 
     /** Returns the number of elements in this list. */
     public int getSize() {
- 	      return size;
+ 	      return this.size;
     }
 
     /** Returns the first element in the list */
     public CharData getFirst() {
-        return first.cp;
+        return this.first.cp;
     }
 
     /** GIVE Adds a CharData object with the given character to the beginning of this list. */

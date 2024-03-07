@@ -64,17 +64,18 @@ public class List {
      *  that has the same chr value as the given char,
      *  or -1 if there is no such object in this list. */
     public int indexOf(char chr) {
-        Node cur = this.first;
+        Node current = first;
         int index = 0;
-        while (cur != null) {
-            if (cur.cp.equals(cur)) {
+        while (current != null) {
+            if (current.cp.equals(chr)) {
                 return index;
             }
-            cur = cur.next;
+            current = current.next;
             index++;
         }
         return -1;
     }
+
 
     /** If the given character exists in one of the CharData objects in this list,
      *  increments its counter. Otherwise, adds a new CharData object with the

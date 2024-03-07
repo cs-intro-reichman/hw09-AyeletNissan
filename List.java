@@ -12,18 +12,7 @@ public class List {
     private int size;
 
     public static void main(String args[]) {
-        List test = new List();
-        test.addFirst('e');
-        test.addFirst('t');
-        test.first.cp.count = 2;
-        test.addFirst('i');
-        test.addFirst('m');
-        test.first.cp.count = 2;
-        test.addFirst('o');
-        test.addFirst('c');
-        System.out.println(test);
-        System.out.println(test.getFirst());
-        System.out.println(test.indexOf('m'));
+        
     }
 
 	

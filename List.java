@@ -29,8 +29,7 @@ public class List {
 
     /** GIVE Adds a CharData object with the given character to the beginning of this list. */
     public void addFirst(char chr) {
-        CharData newc = new CharData(chr);
-        Node newNode = new Node(newc);
+        Node newNode = new Node(new CharData(chr));
         newNode.next=this.first;
         first=newNode;
         this.size++;
@@ -38,15 +37,11 @@ public class List {
     
     /** GIVE Textual representation of this list. */
     public String toString() {
-        String s= "";
-        Node cur= this.first;
-        for(int i=0; i<this.size; i++){
-            s+="(";
-            s+= cur.toString();
-            cur=cur.next;
-            s+=")";
+        String s = "(";
+        for (int i = 0; i < size; i++) {
+            s += this.listIterator(i).current + " ";
         }
-        return s;
+        return s.substring(0, s.length() - 1) + ")";
     }
 
     /** Returns the index of the first CharData object in this list
@@ -56,7 +51,7 @@ public class List {
         Node cur = this.first;
         int index = 0;
         while (cur != null) {
-            if (cur.equals(cur)) {
+            if (cur.cp.equals(cur)) {
                 return index;
             }
             cur = cur.next;

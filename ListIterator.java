@@ -23,4 +23,7 @@ public class ListIterator {
         current = current.next;
         return cp;
     }
+
+    public static void main(String[] args)
+    {}
 }
